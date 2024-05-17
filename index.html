@@ -1,118 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Givers Monitoring</title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <div class="container">
-            <h1 class="title">Givers Monitoring</h1>
-            <p class="byline">
-                Created with ChatGPT by
-                <a href="https://gusarich.com" target="_blank">Gusarich</a>
-            </p>
 
-            <div class="progress-bars">
-                <div class="progress-bar" id="totalMiningContainer">
-                    <label for="totalMiningProgress"
-                        >Total Givers Balance:</label
-                    >
-                    <label for="miningProgress">Mining Progress:</label>
-                    <progress
-                        id="totalMiningProgress"
-                        value="0"
-                        max="5000000000000000000"
-                    ></progress>
-                </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Givers Monitoring</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Givers Monitoring</h1>
+        <p class="byline">
+            Created with ChatGPT by
+            <a href="https://gusarich.com" target="_blank">Gusarich</a>
+        </p>
+
+        <div class="progress-bars">
+            <div class="progress-bar" id="totalMiningContainer">
+                <label for="totalMiningProgress">Total Givers Balance:</label>
+                <label for="miningProgress">Mining Progress:</label>
+                <progress id="totalMiningProgress" value="0" max="5000000000000000000"></progress>
             </div>
         </div>
-        <script>
-            window.givers = [
-                'EQDz5ABKpaMO8BunzgNpcG8TAHvleDXGjSqIi6nOf5cLsFKg',
-                'EQB0wM5SSGxOMQW1kiA_CSnZi8xONhr2EaH0-DH3ErshW_kT',
-                'EQDifNns50Ial2wezfhHT69ycmucPjQvbVa8qLsbFoVqN9_-',
-                'EQDMI8s3OcoaM5A9OhIOj8lh1jqGVoJc4rouNi1XPIu5YcXh',
-                'EQCGGM9fF9hmvAt7OLWZKbX0tf3A5ZrCF7EW5mmdUk3wkqGm',
-                'EQCh7TvrKTFF1shor0ni2SsDF2poyGltxgWaJYOY6J3kqi1G',
-                'EQB3zmSjxPn2c-EcbDAzYiPZtbPi8DkxdcnjHYKRG3xealN0',
-                'EQBFUICbJRNPrV1Q6RN12oq7TNc87hkyV_8stbQOn5Q0ddd2',
-                'EQA-9Z_fJ3PstFkCoZIMij9xM3SVEJfqYtv-x8tKfUlb0Bh5',
-                'EQDKx_EepIPaTIBiaCLbyQn23cyxHQ2UhZxZWf34AKi-MrPN',                
+    </div>
+    <script>
+        window.givers = [
+            'EQCpAvGPCnBIhMFWdd6efPH3ZLsTtyetjQxeS2IrX1a9HeEm',
+            'EQC7eGsx-kLD8oVtApLiDskdgt_b1VKdKwudijaLJNld010j',
+            'EQAYnhrJtCROLhbxubxUvMjyZ461ickzwOvgwrY3f-l58wJw',
+            'EQD5SCLv-T9OVvHsVT3rPpGhDz7zbP1LU-ol72M_j0kWRemw',
+            'EQB7F820tf1LTKAAqaAz0daFx3Dvwa4aXZSanQF7mv6aOx4t',
+            'EQCuWg_dY_7jWcYTgasvCH7n30_pvkehjrS9YHLn1hBXGmf5',
+            'EQD1c9mcDSs4YcxXrRTE0M9Tm27DhSiQK1JvWQfNfvujt3v2',
+            'EQD4oQOP17wNr2aUorEI_yGYia3dF4Ij2wt3CCH91hj-iZ5G',
+            'EQB8X4FXdeBk-2mhOjbP6bcj88d7ZvFd74JfoOQtlIXR-Fko',
+            'EQC_znU6SKJvo3Neip9t2WOUOWCxqEHucmivTnqRhphsfJqu'
+        ]
+        window.giverAddresses = [
+            'EQCtth94ZGUMCNozUDPW8dOZ6-9pXXGe7wLv0pdwb7-RJ70s',
+            'EQAnnboC6-qjymZkGowo-B4_Ockafmq9XTnDqyO7qPiIgdB6',
+            'EQBJUt01Mv2FFTUwavsTHHv_4EHVz5E4Q-0wRowTr_e5lPoY',
+            'EQBLWmcbT3PLwHBUbgyoPINk0vyZ5jOZYDgMSTR8E00oa9a4',
+            'EQC3MfCLkvDSBWoRO_PKP1HbV60Xj34ZLxdMf_fjiPQZkW1i',
+            'EQBHuE9-Ulm1gkFCO-FhbYhZuQ7HcvP46dr4HckiK6HQTzMK',
+            'EQBdsR4nJbBE3IPBhghrayZTHIiPT6b_WZNmipoSXv3Dgxy1',
+            'EQCJfKA1I7mvuWmVRLDPtWXe808XNuz2rMtE2KqspDXIriNx',
+            'EQC1jvjc7A0IbZXEOY4U3m5jqAtNWYt7XOGNXR1e3WCv_1ky',
+            'EQBMsmRGXaR5T5TVLFnoMywetN-UfbaiB9NJUgqk2tAm-gSB',
+        ]
 
+        function createProgressBar(category, index, maxBalance) {
+            // Create the container div for the progress bar
+            var progressBarContainer = document.createElement('div');
+            progressBarContainer.className = 'progress-bar';
+
+            // Create the anchor element
+            var anchor = document.createElement('a');
+            anchor.href =
+                'https://tonviewer.com/' + giverAddresses[index - 1];
+            anchor.className = 'elegant-link'; // Apply the class to the anchor
+            anchor.target = '_blank'; // Open in new tab
+
+            // Create the label
+            var label = document.createElement('label');
+            label.htmlFor = category + index;
+            label.textContent =
+                category + ' #' + (index % 10 === 0 ? 10 : index % 10);
+
+            // Create the progress element
+            var progress = document.createElement('progress');
+            progress.id = 'giver' + index;
+            progress.value = maxBalance; // Placeholder value
+            progress.max = maxBalance;
+
+            // Append label to anchor, and anchor to the container
+            anchor.appendChild(label);
+            progressBarContainer.appendChild(anchor);
+            progressBarContainer.appendChild(progress);
+
+            return progressBarContainer;
+        }
+
+        function addProgressBars() {
+            var categories = ['Extra Small', 'Small', 'Medium', 'Large'];
+            var maxBalances = [
+                350000000000000000, 75000000000000000, 50000000000000000,
+                25000000000000000,
             ];
-            window.giverAddresses = [
-                'EQCfwe95AJDfKuAoP1fBtu-un1yE7Mov-9BXaFM3lrJZwqg_',
-                'EQBoATvbIa9vA7y8EUQE4tlsrrt0EhSUK4mndp49V0z7Me3M',
-                'EQAV3tsPXau3VJanBw4KCFaMk3l_n3sX8NHZNgICFrR-9EGE',
-                'EQAR9DvLZMHo9FAVMHI1vHvL7Fi7jWgjKtUARZ2S_nopQRYz',
-                'EQC10L__G2SeEeM2Lw9osGyYxhoIPqJwE-8Pe7728JcmnJzW',
-                'EQDZJFkh12kw-zLGqKSGVDf1V2PRzedGZDFDcFml5_0QerST',
-                'EQCiLN0gEiZqthGy-dKl4pi4kqWJWjRzR3Jv4jmPOtQHveDN',
-                'EQDB8Mo9EviBkg_BxfNv6C2LO_foJRXcgEF41pmQvMvnB9Jn',
-                'EQAidDzp6v4oe-vKFWvsV8MQzY-4VaeUFnGM3ImrKIJUIid9',
-                'EQAFaPmLLhXveHcw3AYIGDlHbGAbfQWlH45WGf4K4D6DNZxY',
-                
-            ];
+            var container = document.querySelector('.progress-bars');
+            let totalI = 1;
+            categories.forEach((category) => {
+                for (let i = 1; i <= 10; i++, totalI++) {
+                    container.appendChild(
+                        createProgressBar(
+                            category,
+                            totalI,
+                            maxBalances[categories.indexOf(category)]
+                        )
+                    );
+                }
+            });
+        }
 
-            function createProgressBar(category, index, maxBalance) {
-                // Create the container div for the progress bar
-                var progressBarContainer = document.createElement('div');
-                progressBarContainer.className = 'progress-bar';
+        addProgressBars();
+    </script>
+    <!-- <script src="dist/main.js"></script> -->
+    <!-- <script src="imports.js"></script> -->
+    <script src="main.js" type="module"></script>
+</body>
 
-                // Create the anchor element
-                var anchor = document.createElement('a');
-                anchor.href =
-                    'https://tonviewer.com/' + giverAddresses[index - 1];
-                anchor.className = 'elegant-link'; // Apply the class to the anchor
-                anchor.target = '_blank'; // Open in new tab
-
-                // Create the label
-                var label = document.createElement('label');
-                label.htmlFor = category + index;
-                label.textContent =
-                    category + ' #' + (index % 10 === 0 ? 10 : index % 10);
-
-                // Create the progress element
-                var progress = document.createElement('progress');
-                progress.id = 'giver' + index;
-                progress.value = maxBalance; // Placeholder value
-                progress.max = maxBalance;
-
-                // Append label to anchor, and anchor to the container
-                anchor.appendChild(label);
-                progressBarContainer.appendChild(anchor);
-                progressBarContainer.appendChild(progress);
-
-                return progressBarContainer;
-            }
-
-            function addProgressBars() {
-                var categories = ['Extra Small'];
-                var maxBalances = [
-                    350000000000000000, 75000000000000000, 50000000000000000,
-                    25000000000000000,
-                ];
-                var container = document.querySelector('.progress-bars');
-                let totalI = 1;
-                categories.forEach((category) => {
-                    for (let i = 1; i <= 10; i++, totalI++) {
-                        container.appendChild(
-                            createProgressBar(
-                                category,
-                                totalI,
-                                maxBalances[categories.indexOf(category)]
-                            )
-                        );
-                    }
-                });
-            }
-
-            addProgressBars();
-        </script>
-        <!-- <script src="dist/main.js"></script> -->
-        <!-- <script src="imports.js"></script> -->
-        <script src="main.js" type="module"></script>
-    </body>
 </html>
