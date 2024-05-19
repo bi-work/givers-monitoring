@@ -25,7 +25,7 @@ async function main() {
                 'get_wallet_data',
                 []
             ), 20, 500);
-            await delay(1000)
+            await delay(500)
             const powRes = await CallForSuccess(() => client.callGetMethod(
                 Address.parse(giverAddress),
                 'get_pow_params',
