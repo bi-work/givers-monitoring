@@ -69,6 +69,10 @@ async function main() {
                     + ' Hashes: ' + formatN(Number(hashes))
                     + ' Seconds on 3080: ' + seconds3080
             }
+            
+            const updatedProgress = document.getElementById('updatedProgress');
+            let nowDate = new Date();
+            updatedProgress.textContent = nowDate;
 
             return balance; // Return the balance for use in the total
         } catch (error) {
@@ -84,11 +88,6 @@ async function main() {
             totalProgress.value = total; // Assuming total is within the min-max range of the progress bar
             {
                 const label = totalProgress.previousElementSibling.previousElementSibling;
-                let nowDate = new Date();
-                label.textContent = nowDate;
-            }
-            {
-                const label = totalProgress.previousElementSibling;
                 label.textContent =
                     'Total Givers Balance: ' +
                     Math.floor(total / 1e9).toLocaleString() +
