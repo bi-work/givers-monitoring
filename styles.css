@@ -3,7 +3,8 @@ html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: #f4f4f4; /* Optional: added a light background */
+    background: #191919; /* Optional: added a light background */
+    color: #c1c1c1;
 }
 
 .container {
@@ -24,7 +25,7 @@ html {
 .byline {
     margin-bottom: 30px; /* Spacing between byline and progress bars */
     font-size: 0.9em; /* Adjust font size as needed */
-    color: #333; /* Adjust text color as needed */
+    color: #c1c1c1; /* Adjust text color as needed */
 }
 
 .byline a {
