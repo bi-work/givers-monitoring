@@ -83,8 +83,12 @@ async function main() {
         if (totalProgress) {
             totalProgress.value = total; // Assuming total is within the min-max range of the progress bar
             {
-                const label =
-                    totalProgress.previousElementSibling.previousElementSibling;
+                const label = totalProgress.previousElementSibling.previousElementSibling;
+                let nowDate = new Date();
+                label.textContent = nowDate;
+            }
+            {
+                const label = totalProgress.previousElementSibling;
                 label.textContent =
                     'Total Givers Balance: ' +
                     Math.floor(total / 1e9).toLocaleString() +
