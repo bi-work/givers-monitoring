@@ -72,7 +72,7 @@ async function main() {
             
             const updatedProgress = document.getElementById('updatedProgress');
             let nowDate = new Date();
-            updatedProgress.textContent = nowDate;
+            updatedProgress.textContent = 'Updated: ' + nowDate;
 
             return balance; // Return the balance for use in the total
         } catch (error) {
