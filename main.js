@@ -89,7 +89,7 @@ async function main() {
                     'Total Givers Balance: ' +
                     Math.floor(total / 1e9).toLocaleString() +
                     ' / ' +
-                    Number(10000000000).toLocaleString() +
+                    Number(1000000000).toLocaleString() +
                     ' GPU';
             }
             {
@@ -97,7 +97,7 @@ async function main() {
                 label.textContent =
                     'Mining Progress: ' +
                     (
-                        ((10000000000000000000 - total) / 10000000000000000000) *
+                        ((1000000000000000000 - total) / 1000000000000000000) *
                         100
                     ).toFixed('2') +
                     '%';
