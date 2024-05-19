@@ -89,15 +89,15 @@ async function main() {
                     'Total Givers Balance: ' +
                     Math.floor(total / 1e9).toLocaleString() +
                     ' / ' +
-                    Number(5000000000).toLocaleString() +
-                    ' GRAM';
+                    Number(10000000000).toLocaleString() +
+                    ' GPU';
             }
             {
                 const label = totalProgress.previousElementSibling;
                 label.textContent =
                     'Mining Progress: ' +
                     (
-                        ((5000000000000000000 - total) / 5000000000000000000) *
+                        ((10000000000000000000 - total) / 10000000000000000000) *
                         100
                     ).toFixed('2') +
                     '%';
