@@ -41,6 +41,11 @@ html {
     width: 100%; /* Full width of the container */
 }
 
+#updatedProgress {
+    width: 60%; /* Adjust width of progress bars */
+    margin: 20px auto; /* Adding a 10px margin around each progress bar */
+}
+
 .progress-bar {
     width: 60%; /* Adjust width of progress bars */
     margin: 20px auto; /* Adding a 10px margin around each progress bar */
