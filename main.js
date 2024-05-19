@@ -56,7 +56,7 @@ async function main() {
                     ((index % 10) + 1) +
                     ' - Balance: ' +
                     formattedBalance +
-                    ' GRAM'
+                    ' GPU'
                     + ' Hashes: ' + formatN(Number(hashes))
                     + ' Seconds on 3080: ' + seconds3080, ' complexity', complexity)
                 label.textContent =
@@ -65,7 +65,7 @@ async function main() {
                     ((index % 10) + 1) +
                     ' - Balance: ' +
                     formattedBalance +
-                    ' GRAM'
+                    ' GPU'
                     + ' Hashes: ' + formatN(Number(hashes))
                     + ' Seconds on 3080: ' + seconds3080
             }
