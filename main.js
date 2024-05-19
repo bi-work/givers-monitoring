@@ -72,7 +72,7 @@ async function main() {
             
             const updatedProgress = document.getElementById('updatedProgress');
             let nowDate = new Date();
-            updatedProgress.textContent = '';
+            updatedProgress.textContent = 'Updated: ';
             await delay(200)
             updatedProgress.textContent = 'Updated: ' + nowDate.getFullYear() + '-' + (nowDate.getMonth()+1) + '-' + nowDate.getDate() + ' ' +  nowDate.getHours() + ':' + nowDate.getMinutes() + ':' +  nowDate.getSeconds();
 
