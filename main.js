@@ -74,7 +74,7 @@ async function main() {
             let nowDate = new Date();
             updatedProgress.textContent = 'Updated: ';
             await delay(200)
-            updatedProgress.textContent = 'Updated: ' + nowDate.getFullYear() + '-' + (nowDate.getMonth()+1) + '-' + nowDate.getDate() + ' ' +  nowDate.getHours() + ':' + nowDate.getMinutes() + ':' +  nowDate.getSeconds();
+            updatedProgress.textContent = 'Updated: ' + nowDate.getFullYear() + '-' + ('0' + (nowDate.getMonth()+1)).slice(-2) + '-' + ('0' + MyDate.getDate()).slice(-2) + ' ' + nowDate.getHours() + ':' + ('0' + nowDate.getMinutes()).slice(-2) + ':' + ('0' + nowDate.getSeconds()).slice(-2);
 
             return balance; // Return the balance for use in the total
         } catch (error) {
