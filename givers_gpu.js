@@ -26,7 +26,7 @@ exports.givers10000 = [
     { address: 'ZZZZZZZZ', reward: 10000 }, // 10 000
 ];
 exports.givers100000 = [
-    { address: 'ZZZZZZZZ', reward: 100000 },
+    { address: 'EQCklqxLokjCHkujRzAZMlaGM4JSUHS3IpUhqQ6y8mzD2DiL', reward: 100000 },
     { address: 'ZZZZZZZZ', reward: 100000 },
     { address: 'ZZZZZZZZ', reward: 100000 },
     { address: 'ZZZZZZZZ', reward: 100000 },
